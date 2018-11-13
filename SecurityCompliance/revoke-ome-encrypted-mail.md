@@ -69,8 +69,8 @@ Once you know the Message ID of the email you want to revoke, you can revoke the
 3. To check whether the email was revoked, run the Get-OMEMessageStatus cmdlet as follows:
     
     ```
-    Get-OMEMessageStatus -MessageId "<messageId>"
+    Get-OMEMessageStatus -MessageId "<messageId> | fl Revoked "
     ```  
     If revocation was successful, the cmdlet returns the following result:  
 
-    ```The encrypted email with the subject "<subject>" and Message ID "<messageId>" was successfully revoked.```
+    ```Revoked : True ```
